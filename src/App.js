@@ -1,35 +1,38 @@
-import user from '../src/img/user.png';
-import edit from '../src/img/edit.png';
-import mail from '../src/img/mail.png';
-import setting from '../src/img/setting.png';
-import help from '../src/img/help.png';
-import logout from '../src/img/logout.png';
+// import user from '../src/img/user.png';
+// import edit from '../src/img/edit.png';
+// import mail from '../src/img/mail.png';
+// import setting from '../src/img/setting.png';
+// import help from '../src/img/help.png';
+// import logout from '../src/img/logout.png';
 import './App.css';
-import React, { useState, useEffect, useRef } from 'react';
+// import React, { useState, useEffect, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Dropdown from './Dropdown';
 
 
 function App() {
-  const [open, setOpen] = useState(false);
-  const menRef = useRef();
+  // const [open, setOpen] = useState(false);
+  // const menRef = useRef();
 
-  useEffect(() => {
-    const closeMenu = (e) => {
-      if (menRef.current && !menRef.current.contains(e.target)) {
-        setOpen(false);
-      }
-    };
+  // useEffect(() => {
+  //   const closeMenu = (e) => {
+  //     if (menRef.current && !menRef.current.contains(e.target)) {
+  //       setOpen(false);
+  //     }
+  //   };
 
-    document.addEventListener('mousedown', closeMenu);
+  //   document.addEventListener('mousedown', closeMenu);
 
-    return () => {
-      document.removeEventListener('mousedown', closeMenu);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener('mousedown', closeMenu);
+  //   };
+  // }, []);
 
   return (
     <div className="App">
-      <div className="menu-container" ref={menRef}>
+      <Dropdown/>
+    
+      {/* <div className="menu-container" ref={menRef}>
         <div className="menu-trigger" onClick={() => setOpen(!open)}>
           <img src={user} alt="User Icon" />
         </div>
@@ -49,18 +52,21 @@ function App() {
             <DropdownItem img={logout} text="Logout" />
           </ul>
         </div>
-      </div>
+      </div> */}
+      
     </div>
+    
+
   );
 }
 
-function DropdownItem(props) {
-  return (
-    <li className="dropdownItem">
-      <img src={props.img} alt={props.text} />
-      <a className="dropdown-link">{props.text}</a>
-    </li>
-  );
-}
+// function DropdownItem(props) {
+//   return (
+//     <li className="dropdownItem">
+//       <img src={props.img} alt={props.text} />
+//       <a className="dropdown-link">{props.text}</a>
+//     </li>
+//   );
+// }
 
 export default App;

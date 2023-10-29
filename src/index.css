@@ -23,7 +23,7 @@ code {
 }
 
 
-.menu-trigger img {
+/* .menu-trigger img {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -92,7 +92,7 @@ h3 span {
 .dropdown-menu ul li {
   padding: 10px 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
+} 
 
 .dropdown-menu ul li:hover a {
   color: rgb(212, 33, 9);
@@ -121,7 +121,7 @@ h3 span {
   max-width: 100px;
   margin-left: 10px;
   transition: color var(--speed);
-}
+} */
 
 
 
